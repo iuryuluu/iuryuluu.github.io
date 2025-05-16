@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio Personal - Desarrollador</title>
+    <style>
+        /* Earth tone color palette */
+        :root {
+            --earth-dark: #4b3b2b;
+            --earth-medium: #8c6e4b;
+            --earth-light: #d9c9b1;
+            --earth-green: #758269;
+            --earth-highlight: #bda27e;
+            --background: #f4efe8;
+            --text-dark: #3a2f23;
+            --text-light: #ffffff;
+        }
+        /* Reset and base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: var(--background);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: var(--earth-light);
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--earth-highlight);
+        }
+        header {
+            background: var(--earth-dark);
+            color: var(--text-light);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: var(--earth-light);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.25rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        nav ul li a.active,
+        nav ul li a:hover {
+            border-bottom: 2px solid var(--earth-highlight);
+        }
+        main {
+            max-width: 900px;
+            margin: 3rem auto 5rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            margin-bottom: 4rem;
+            background: var(--earth-light);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(139, 110, 75, 0.2);
+        }
+        section h2 {
+            color: var(--earth-dark);
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--earth-green);
+            padding-bottom: 0.3rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        /* Inicio Section Styling */
+        #inicio {
+            background: var(--earth-medium);
+            color: var(--text-light);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(75, 59, 43, 0.5);
+        }
+        #inicio h1 {
+            font-size: 3rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 3px;
+        }
+        #inicio p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /* Experience and Projects content placeholders */
+        .content-list {
+            list-style: disc inside;
+            margin-top: 1rem;
+            color: var(--earth-dark);
+        }
+        .content-list li {
+            margin-bottom: 0.75rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: var(--earth-dark);
+            color: var(--text-light);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            header, main {
+                padding: 0 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                background: var(--earth-dark);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 180px;
+                border-radius: 0 0 0 10px;
+                display: none;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                margin: 1rem 0;
+                margin-left: 0;
+            }
+            .menu-toggle {
+                display: inline-block;
+                cursor: pointer;
+                color: var(--earth-light);
+                font-size: 1.5rem;
+                user-select: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="nav-logo">Mi Portafolio</div>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+                <ul id="nav-links">
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#experiencia-academica">Experiencia Académica</a></li>
+                    <li><a href="#experiencia-personal">Experiencia Personal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Hola, soy [Tu Nombre]</h1>
+            <p>Desarrollador apasionado por crear soluciones innovadoras y eficientes. Bienvenido a mi portafolio personal.</p>
+        </section>
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <ul class="content-list">
+                <li>Proyecto 1: Descripción breve del proyecto, tecnologías utilizadas y resultados obtenidos.</li>
+                <li>Proyecto 2: Descripción breve del proyecto, tecnologías utilizadas y resultados obtenidos.</li>
+                <li>Proyecto 3: Descripción breve del proyecto, tecnologías utilizadas y resultados obtenidos.</li>
+            </ul>
+        </section>
+        <section id="experiencia-academica">
+            <h2>Experiencia Académica</h2>
+            <ul class="content-list">
+                <li>Grado o curso 1: Institución, años, puntos destacados.</li>
+                <li>Grado o curso 2: Institución, años, puntos destacados.</li>
+            </ul>
+        </section>
+        <section id="experiencia-personal">
+            <h2>Experiencia Personal</h2>
+            <ul class="content-list">
+                <li>Experiencia laboral 1: Empresa, puesto, responsabilidades y logros.</li>
+                <li>Experiencia laboral 2: Empresa, puesto, responsabilidades y logros.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 [Tu Nombre] - Todos los derechos reservados.
+    </footer>
+
+    <script>
+        // Mobile menu toggle script
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Scroll highlight active section link
+        const sections = document.querySelectorAll('section[id]');
+        const navAnchors = document.querySelectorAll('nav ul li a');
+
+        window.addEventListener('scroll', () => {
+            let scrollY = window.pageYOffset;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 70;
+                const sectionId = current.getAttribute('id');
+
+                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navAnchors.forEach(a => {
+                        a.classList.remove('active');
+                        if(a.getAttribute('href') === '#' + sectionId) {
+                            a.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
